@@ -1,0 +1,146 @@
+body.dark {
+    background-color: #11111c;
+}
+
+body {
+    background-color: #fff;
+    transition: .3s ease-in-out;
+}
+
+.mode {
+    width: 45px;
+    height: 21px;
+    background-color: #2986dc;
+    border-radius: 200px;
+    box-shadow: 0px 7px 9px 0px rgba(0, 0, 0, 0.1) inset, 
+    0px 1px 13px 0px rgba(0, 0, 0, 0.15) inset,
+    -2px -4px 8px rgba(255, 255, 255, 0.4) ,
+    2px 4px 8px rgba(219, 219, 219, 0.4) ;
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* padding: 0 10px; */
+    overflow: hidden;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    /* margin-right: 50px; */
+    filter: drop-shadow(1px 2px 1px gray);
+}
+
+.m-color {
+    background: linear-gradient(90deg, black, darkorange, black, darkorange, darkorange, black);
+    background-size: 400%;
+    animation: rgbb 10s infinite linear;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    margin-right: 3px;
+    margin-left: 10px;
+    font-size: 10px;
+}
+
+@keyframes rgbb {
+    0%{
+        background-position: 0 ;
+    }
+    100%{
+        background-position: 400%;
+    }
+  }
+
+.mode.dark {
+    background-color: #11111c;
+    /* box-shadow: 100px 100px 200px 0px black inset, 
+    100px 100px 200px 0px black inset,
+    102px -4px 200px black ,
+    200px 100px 200px black ; */
+}
+
+.mode .sunmoon {
+    position: relative;
+    transition: .3s ease-in-out;
+    z-index: 99;
+}
+
+.mode.dark .sunmoon {
+    transform: translateX(215px);
+}
+
+.mode.dark .sunmoon .circle {
+    background-color: #e6f1f5;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1) inset, 
+    2px 3px 4px rgba(0, 0, 0, 0.2) inset,
+    -3px -4px 6px rgba(129, 147, 151, 0.5);
+    rotate: 0deg;
+}
+
+.mode .sunmoon .circle .moonCircle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #b7c8d8;
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    opacity: 0;
+    transition: .4s ease;
+}
+
+.mode .sunmoon .circle .moonCircle:nth-child(2) {
+    width: 40px;
+    height: 40px;
+    top: 55px;
+    left: 20px;
+}
+
+.mode .sunmoon .circle .moonCircle:nth-child(3) {
+    width: 25px;
+    height: 25px;
+    top: 45px;
+    left: 70px;
+}
+
+.mode.dark .sunmoon .circle .moonCircle {
+    opacity: 1;
+}
+
+.mode .sunmoon .gradasi {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.mode .cloud {
+    position: absolute;
+    right: 50%;
+    top: 30%;
+    transition: .3s ease-in-out;
+    z-index: 1;
+}
+
+.mode.dark .cloud {
+    top: 140px;
+}
+
+.mode .star {
+    transition: .3s ease-in-out;
+    position: absolute;
+    left: 30px;
+    top: -130px;
+}
+
+.mode.dark .star {
+    left: 30px;
+    top: 30px;
+}
+
+.sun-mode {
+    width: 180px;
+    margin-left: -65px;
+}
+
+.shams {
+    color: darkorange;
+}
